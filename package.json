@@ -3,8 +3,8 @@
   "version": "5.7.1",
   "author": "Xander Deseyn",
   "license": "MIT",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "src/index.ts",
+  "types": "src/types.ts",
   "description": "Customizable linechart for react-native that works with flex",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
