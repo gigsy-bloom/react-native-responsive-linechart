@@ -47,8 +47,7 @@
     "react": "*",
     "react-native": "*",
     "react-native-gesture-handler": ">=1.4.0",
-    "react-native-svg": ">=7.0.0",
-    "moment": ">=2.29.1"
+    "react-native-svg": ">=7.0.0"
   },
   "dependencies": {
     "@yr/monotone-cubic-spline": "^1.0.3",
