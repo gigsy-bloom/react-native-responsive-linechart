@@ -3,6 +3,7 @@ import * as React from 'react'
 import { Text, Rect } from 'react-native-svg'
 import ChartContext from './ChartContext'
 import { ChartDataPoint, Label, XYValue, Shape } from './types'
+import moment from 'moment'
 
 type Props = {
   theme?: {
@@ -75,6 +76,6 @@ const defaultProps = {
       rx: 4,
       color: 'black',
     },
-    formatter: (v: ChartDataPoint) => String(v.y),
+    formatter: (v: ChartDataPoint) => String(`${v.y}, ${moment(v.x * 1000).format('MMM Do')}`)
   },
 }
