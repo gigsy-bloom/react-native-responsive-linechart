@@ -11,7 +11,7 @@ type Props = {
     shape?: Shape
     formatter?: (value: ChartDataPoint) => string
   }
-  value?: ChartDataPoint
+  value?: String
   position?: XYValue
 }
 
@@ -49,7 +49,7 @@ const Tooltip: React.FC<Props> = (props) => {
         opacity={label.opacity}
         textAnchor={label.textAnchor}
       >
-        {formatter(value)}
+        {value}
       </Text>
     </React.Fragment>
   )
