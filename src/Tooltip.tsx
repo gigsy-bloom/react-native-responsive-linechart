@@ -11,12 +11,15 @@ type Props = {
     shape?: Shape
     formatter?: (value: ChartDataPoint) => string
   }
+  type?:String,
   value?: ChartDataPoint
   position?: XYValue
 }
 
 const Tooltip: React.FC<Props> = (props) => {
   const { dimensions } = React.useContext(ChartContext)
+
+  const {type} = props;
 
   const {
     theme: { label, formatter, shape },
@@ -49,7 +52,7 @@ const Tooltip: React.FC<Props> = (props) => {
         opacity={label.opacity}
         textAnchor={label.textAnchor}
       >
-        {formatter(value)}
+        {type === 'onlyY' ? String(value.y):formatter(value)}
       </Text>
     </React.Fragment>
   )
